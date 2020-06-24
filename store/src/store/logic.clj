@@ -38,3 +38,7 @@
 (defn ascending-summary-orders-spent-by-user [orders]
   (->> (summary-orders-spent-by-user orders)
        (sort-by :total-spent)))
+
+(defn descending-summary-orders-spent-by-user [orders]
+  (->> (ascending-summary-orders-spent-by-user orders)
+       reverse))
