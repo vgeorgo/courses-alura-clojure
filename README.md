@@ -3,7 +3,7 @@
 Clojure introduction and language usabilities.
 
 ## Links
-https://cursos.alura.com.br/course/clojure-introducao-a-programacao-funcional
+https://cursos.alura.com.br/course/clojure-introducao-a-programacao-funcional  
 https://cursos.alura.com.br/course/clojure-colecoes-no-dia-a-dia
 
 ## Installation
