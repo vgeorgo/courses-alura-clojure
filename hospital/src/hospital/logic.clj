@@ -1,22 +1,26 @@
 (ns hospital.logic)
 
-(defn space-in-queue? [hospital department]
+(defn space-in-queue? [queue]
   ; Thread first (previous variable will be added as the first symbol on the next operation)
-  (-> hospital
-      (get department)
+  (-> queue
       count
       (< 5)))
 
 (defn person-arrives [hospital department person]
-  (if (space-in-queue? hospital department)
+  (if (space-in-queue? (get hospital department))
     (update hospital department conj person)
+    (throw (ex-info "Queue is full" {:person person}))))
+
+(defn person-arrives-queue [queue person]
+  (if (space-in-queue? queue)
+    (conj queue person)
     (throw (ex-info "Queue is full" {:person person}))))
 
 (defn person-arrives-with-sleep
   [hospital department person]
   (println "Trying to add person: " person)
   (Thread/sleep (* (rand) 2000))
-  (if (space-in-queue? hospital department)
+  (if (space-in-queue? (get hospital department))
     (do
       ; (Thread/sleep (* (rand) 2000))
       (println "Updating person: " person)
