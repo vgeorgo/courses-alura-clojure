@@ -3,13 +3,13 @@
   (:require [hospital.model :as h.model]
             [hospital.logic :as h.logic]))
 
-(defn person-arrives-swap! [hospital, person]
+(defn person-arrives! [hospital, person]
   (swap! hospital h.logic/person-arrives :waiting person))
 
 (defn simulate-day-1 []
   (let [hospital (atom (h.model/new-hospital))
         people ["111" "222" "333" "444" "555" "666"]
-        start-arriving-thread #(.start (Thread. (fn [] (person-arrives-swap! hospital %))))]
+        start-arriving-thread #(.start (Thread. (fn [] (person-arrives! hospital %))))]
 
     ; Simulating using mapv to force map to have all items initialized.
     ; Instead of its default lazy behavior.
@@ -25,7 +25,7 @@
   ([hospital]
    (fn [person] (start-arriving-thread-two-signatures hospital person)))
   ([hospital person]
-   (.start (Thread. (fn [] (person-arrives-swap! hospital person))))))
+   (.start (Thread. (fn [] (person-arrives! hospital person))))))
 
 (defn simulate-day-2 []
   (let [hospital (atom (h.model/new-hospital))
@@ -42,7 +42,7 @@
 
 
 (defn start-arriving-thread [hospital person]
-  (.start (Thread. (fn [] (person-arrives-swap! hospital person)))))
+  (.start (Thread. (fn [] (person-arrives! hospital person)))))
 
 (defn simulate-day-3 []
   (let [hospital (atom (h.model/new-hospital))
