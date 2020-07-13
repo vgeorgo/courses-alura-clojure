@@ -36,7 +36,7 @@
   (println "Plan patient sign weird-exam? " (sign-authorization? plan-patient :weird-exam 500)))
 
 
-; From Sean Devlin examples
+; From Sean Devlin (https://github.com/seancorfield) examples
 (defprotocol Datable
   (to-ms [this]))
 
