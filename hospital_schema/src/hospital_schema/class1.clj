@@ -56,7 +56,7 @@
   [visits, patient :- Long]
   (println "Patient visits" patient "are" (get visits patient)))
 
-(test-patients)
+; (test-patients)
 
 
 (s/defn new-patient
