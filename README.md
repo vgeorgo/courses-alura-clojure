@@ -4,12 +4,12 @@ Clojure introduction and language usabilities.
 
 ## Links
 https://cursos.alura.com.br/course/clojure-introducao-a-programacao-funcional  
-https://cursos.alura.com.br/course/clojure-colecoes-no-dia-a-dia
-https://cursos.alura.com.br/course/clojure-mutabilidade-com-atoms-e-refs
-https://cursos.alura.com.br/course/clojure-record-protocol-multi-method
-https://cursos.alura.com.br/course/clojure-schemas
-https://cursos.alura.com.br/course/clojure-explorando-testes
-https://cursos.alura.com.br/course/clojure-property-based-test
+https://cursos.alura.com.br/course/clojure-colecoes-no-dia-a-dia  
+https://cursos.alura.com.br/course/clojure-mutabilidade-com-atoms-e-refs  
+https://cursos.alura.com.br/course/clojure-record-protocol-multi-method  
+https://cursos.alura.com.br/course/clojure-schemas  
+https://cursos.alura.com.br/course/clojure-explorando-testes  
+https://cursos.alura.com.br/course/clojure-property-based-test  
 
 ## Installation
 
